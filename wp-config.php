@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME', 'metroquip-wp-Vk4KpkuP');
-define('DB_USER', '1SpOGBgUi4N7');
-define('DB_PASSWORD', 'j5RrlCPSuo1KDXEX');
+define('DB_NAME', 'metroquip');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'giznad0');
 
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
