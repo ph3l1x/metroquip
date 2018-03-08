@@ -1,0 +1,188 @@
+.contact-sidebar {
+
+	&-column {
+		background-color: $dark-gray;
+		@include make-col-ready();
+		@include make-col(0);
+		@include make-col-offset(0);
+		display: none;
+		overflow-y: scroll;
+
+
+		@include media-breakpoint-up(lg) {
+			@include make-col(3);
+			@include make-col-offset(9);
+			height: 100vh;
+			display: block;
+			position: fixed;
+		}
+	}
+
+	&-wrapper {
+		padding: 1rem;
+
+		@media (min-width: 1070px) {
+			padding: 2rem;
+		}
+	}
+
+	&-title-container {
+		
+	}
+
+	&-title {
+		color: $brand-primary;
+		font-family: 'Teko', sans-serif;
+		font-size: 2.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&-phone-number-container {
+		margin-bottom: 0.3rem;
+
+		i {
+			color: $white;
+		}
+	}
+
+	&-phone-number {
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	&-subtext-container {
+		margin-bottom: 20px;
+	}
+
+	&-subtext {
+		color: $white;
+		font-size: 0.8rem;
+		line-height: 1.2;
+	}
+
+	&-personnel-row {
+		@include make-row();
+		margin-bottom: 20px;
+	}
+
+	&-personnel-column {
+		@include make-col-ready();
+		@include make-col(12);
+		margin-bottom: 20px;
+
+		@media (min-width: 1478px) {
+			@include make-col(6);
+			display: block;
+		}
+	}
+
+	&-personnel-photo {
+		width: 50%;
+		height: auto;
+		margin-bottom: 0.75rem;
+
+		@media (min-width: 1478px) {
+			width: 90%;
+		}
+	}
+
+	&-personnel-name {
+		display: block;
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: 0.05rem;
+		line-height: 1;
+		margin-bottom: 4px;
+	}
+
+	&-personnel-title {
+		display: block;
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.75rem;
+		line-height: 1;
+		margin-bottom: 2px;
+	}
+
+	&-personnel-email-address {
+		display: block;
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 1.2;
+		margin-bottom: 2px;
+
+		&:visited {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:hover,
+		&:active {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+
+	&-personnel-territories-serviced {
+		position: relative;
+		// display: inline-block;
+		color: $brand-primary;
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	&-form {
+
+	}
+
+	&-input {
+		appearance: none;
+		border: none;
+		display: inline-block;
+		padding: 5px;
+		width: 100%;
+		margin-bottom: 1.1rem;
+
+		&-label {
+			margin-bottom: 0.2rem;
+			font-family: 'Heebo', sans-serif;
+			font-size: 0.8rem;
+			font-weight: 300;
+			color: $white;
+			display: block;
+		}
+
+		&-submit {
+			appearance: none;
+			border: none;
+			color: $white;
+			background-color: $brand-primary;
+			font-family: 'Teko', sans-serif;
+			font-size: 1.4rem;
+			padding: 3px 20px 0px;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: background-color 0.15s;
+			width: 100%;
+
+			&:hover,
+			&:active {
+				background-color: darken($brand-primary, 6%);
+			}
+
+			@media (min-width: 1320px) {
+				padding: 3px 80px 0px;
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+.main-search {
+
+	&-container {
+		position: absolute;
+		right: 0;
+		top: 0px;
+		padding: 15px 25px;
+		background-color: rgba($white, 0.3);
+
+		@media (min-width: 463px) {
+			top: 10px;
+		}
+
+		@include media-breakpoint-up(sm) {
+			top: 10px;
+		}
+
+		@include media-breakpoint-up(md) {
+			top: 30px;
+		}
+	}
+
+	&-phone {
+		position: relative;
+		top: 5px;
+		display: none;
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.9rem;
+		line-height: 1;
+
+		@media (min-width: 463px) {
+			display: inline-block;
+		}
+
+		&:link {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:visited {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:active {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+
+	&-separator {
+		position: relative;
+		top: 5px;
+		display: none;
+		padding: 0px 8px;
+		color: $white;
+		font-family: 'Heebo', sans-serif;
+		line-height: 1;
+
+		@media (min-width: 463px) {
+			display: inline-block;
+		}
+	}
+
+	&-input {
+		appearance: none;
+		border: none;
+		border-bottom: 1px solid $white;
+		background-color: transparent;
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.8rem;
+		margin-right: 10px;
+		padding: 0;
+		color: $white;
+		outline: none;
+		line-height: 1;
+
+		&-label {
+			position: relative;
+			top: 5px;
+			margin-right: 5px;
+			font-family: 'Heebo', sans-serif;
+			font-size: 0.8rem;
+			color: $white;
+			text-transform: uppercase;
+			line-height: 1;
+
+			@media (min-width: 346px) {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	&-submit-button {
+		position: relative;
+		top: 2px;
+		appearance: none;
+		border: none;
+		background-color: $black;
+		padding: 3px 14px 0px;
+		color: $white;
+		font-family: 'Teko', sans-serif;
+		font-size: 1rem;
+		text-transform: uppercase;
+		line-height: 1.1;
+		letter-spacing: 1px;
+		cursor: pointer;
+
+		@media (min-width: 341px) {
+			padding: 3px 24px 0px;
+		}
+	}
+}

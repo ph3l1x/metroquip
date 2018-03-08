@@ -1,0 +1,154 @@
+.part-accessory {
+
+	&-container {
+		@extend .container-fluid;
+	}
+
+	&-row {
+		@include make-row();
+	}
+
+	&-column {
+		// @include make-col-ready();
+		@include make-col(12);
+		@include make-col-offset(0);
+
+		@include media-breakpoint-up(lg) {
+			// @include make-col-ready();
+			@include make-col(7);
+			@include make-col-offset(2);
+		}
+
+		@media (min-width: 1620px) {
+			@include make-col(8);
+			@include make-col-offset(1);
+		}
+	}
+
+	&-hero-image {
+		width: auto;
+		height: 100%;
+
+		&-container {
+			width: 100%;
+			height: 350px;
+			text-align: center;
+		}
+	}
+
+	&-content {
+
+		&-row {
+			@include make-row();
+			padding: 50px 15px;
+
+			@include media-breakpoint-up(sm) {
+				padding: 50px;
+			}
+		}
+
+		&-column {
+			@include make-col-ready();
+			@include make-col(12);
+
+			&--left {
+				@include make-col-ready();
+				@include make-col(12);
+				margin-bottom: 40px;
+
+				@include media-breakpoint-up(lg) {
+					@include make-col(7);
+				}
+
+				@include media-breakpoint-up(xl) {
+					@include make-col(6);
+				}
+			}
+
+			&--right {
+				@include make-col-ready();
+				@include make-col(12);
+
+				@include media-breakpoint-up(lg) {
+					@include make-col(5);
+				}
+
+				@include media-breakpoint-up(xl) {
+					@include make-col(6);
+				}
+			}
+		}
+
+		&-brand-logo {
+			width: 50%;
+			height: auto;
+			margin-bottom: 40px;
+		}
+
+		&-product-title {
+			font-family: 'Teko', sans-serif;
+			font-size: 2.6rem;
+			font-weight: 700;
+			text-transform: uppercase;			
+		}
+
+		&-description {
+			font-family: 'Heebo', sans-serif;
+			font-size: 1rem;
+			line-height: 1.2;
+			margin-bottom: 50px;
+		}
+
+		&-tech-specs-title {
+			font-family: 'Heebo', sans-serif;
+			font-size: 1.2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+		}
+
+		&-tech-spec-list {
+			list-style-type: none;
+			padding-left: 0;			
+		}
+
+		&-tech-spec {
+			list-style-type: none;
+			font-family: 'Heebo', sans-serif;
+			font-size: 1rem;
+			font-weight: 300;
+			margin-bottom: 10px;			
+		}
+
+		&-download-brochure-link {
+			display: inline-block;
+			padding: 4px 32px 1px;
+			font-family: 'Teko', sans-serif;
+			font-size: 1.3rem;
+			appearance: none;
+			border: none;
+			background-color: $black;
+			color: $white;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: background-color 0.15s;
+
+			&:link {
+				color: $white;
+				text-decoration: none;
+			}
+
+			&:visited {
+				color: $white;
+				text-decoration: none;
+			}
+
+			&:hover,
+			&:active {
+				color: $white;
+				text-decoration: none;
+				background-color: lighten($black,20%);
+			}
+		}
+	}
+}

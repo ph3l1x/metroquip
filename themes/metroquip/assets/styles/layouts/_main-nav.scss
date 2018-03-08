@@ -1,0 +1,469 @@
+/* since the hover effect is the same for every icon
+ * we can just put it in a mixin to include it wherever
+ * we need it
+ */
+@mixin mainNavLinkHover {
+	&:hover,
+	&:active {
+		color: $white;
+		background-color: $black;
+
+		svg > * {
+			fill: $brand-secondary;
+		}
+	}
+}
+
+.main-nav {
+
+	&-column {
+		display: none;
+		z-index: 100;
+		position: fixed;
+		height: 100vh;
+		background-color: $light-gray;
+		// @include make-col-ready();
+		@include make-col(0);
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+			@include make-col(2);
+		}
+
+		@media (min-width: 1620px) {
+			display: block;
+			@include make-col(1);
+		}
+	}
+
+	&-home-logo {
+		width: 100%;
+		height: auto;
+	}
+
+	&-list {
+		padding-left: 0;
+
+		&-item {
+			position: relative;
+			list-style: none;
+			text-align: center;
+
+			&:hover {
+				ul {
+					// an override for the JS inline style that is applied
+					// when we temporarily make each display:block to get
+					// the real width and then display:none again to hide
+					display: block !important;
+				}
+			}
+
+			&:nth-child(2) {
+				.main-nav-list-item-link {
+					svg {
+						width: 90px;
+
+						@media (min-width: 1620px) {
+							width: 70px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(3) {
+				.main-nav-list-item-link {
+					svg {
+						width: 65px;
+
+						@media (min-width: 1620px) {
+							width: 55px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(4) {
+				.main-nav-list-item-link {
+					svg {
+						width: 57px;
+						
+						@media (min-width: 1620px) {
+							width: 50px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(5) {
+				.main-nav-list-item-link {
+					svg {
+						width: 68px;
+
+						@media (min-width: 1620px) {
+							width: 58px;
+						}
+						
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(6) {
+				.main-nav-list-item-link {
+					svg {
+						width: 60px;
+
+						@media (min-width: 1620px) {
+							width: 50px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(7) {
+				.main-nav-list-item-link {
+					svg {
+						width: 48px;
+
+						@media (min-width: 1620px) {
+							width: 42px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&:nth-child(8) {
+				.main-nav-list-item-link {
+					svg {
+						width: 55px;
+
+						@media (min-width: 1620px) {
+							width: 50px;
+						}
+
+						* {
+							fill: $brand-primary;
+						}
+					}
+
+					@include mainNavLinkHover();
+				}
+			}
+
+			&-link {
+				display: inline-block;
+				width: 100%;
+				padding: 6px 0px;
+				text-transform: uppercase;
+				color: $black;
+				font-size: 0.8rem;
+
+				@media (min-width: 1620px) {
+					font-size: 0.7rem;
+					padding: 10px 0px;
+				}
+
+				&:link {
+					color: $black;
+					text-decoration: none;
+				}
+
+				&:visited {
+					color: $black;
+					text-decoration: none;
+				}
+
+				&:hover {
+					background-color: darken(#ebebeb,6%);
+					text-decoration: none;
+				}
+
+				&:active {
+					background-color: darken(#ebebeb,6%);
+					text-decoration: none;
+				}
+
+				&--home {
+					display: inline-block;
+					padding: 20px;
+					background-color: $black;
+				}
+			}
+		}
+	}
+}
+
+.main-subnav {
+
+	&-list {
+		display: none;
+		z-index: 101;
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		background-color: $black;
+		overflow-y: auto;
+		padding-left: 0;
+
+		&-item {
+			position: relative;
+			list-style-type: none;
+			text-align: left;
+			padding: 0 20px;
+			display: block;
+
+			&:hover {
+				.main-subsubnav-column {
+					display: block;
+				}
+			}
+
+			&-link {
+				display: inline-block;
+				width: 100%;
+				padding: 24px 0;
+				border-bottom: 1px solid $white;
+				text-transform: uppercase;
+				font-size: 0.8rem;
+				color: $white;
+
+				&:link {
+					color: $white;
+					text-decoration: none;
+				}
+
+				&:visited {
+					color: $white;
+					text-decoration: none;
+				}
+
+				&:hover {
+					color: $brand-secondary;
+					text-decoration: none;
+				}
+
+				&:active {
+					color: $brand-secondary;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.main-subsubnav {
+
+	&-column {
+		display: none;
+		z-index: 102;
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		background-color: $gray;
+		padding: 20px;
+		overflow-y: auto;
+
+		&:hover {
+			display: block;
+		}	
+	}
+
+	&-wrapper {
+
+	}
+
+	&-brand {
+		&-title {
+			font-family: 'Heebo', sans-serif;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			color: $white;
+			margin-bottom: 10px;
+
+			&-link {
+				text-decoration: none;
+
+				&:visited,
+				&:hover,
+				&:active {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+
+		&-logo {
+			width: 120px;
+			height: auto;
+
+			&-container {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-product-category {
+		font-family: 'Heebo', sans-serif;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 10px;
+
+		&::after {
+			position: relative;
+			display: inline-block;
+			content: ' ';
+			width: 100%;
+			height: 1px;
+			background-color: $white;
+		}
+
+		&-link {
+			text-decoration: none;
+
+			&-link {
+				text-decoration: none;
+
+				&:visited {
+					text-decoration: none;
+				}
+
+				&:hover,
+				&:active {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	&-list {
+		padding-left: 0;
+		margin-bottom: 60px;
+
+		&-item {
+			position: relative;
+			list-style-type: none;
+			text-align: left;
+
+			&-link {
+				display: inline-block;
+				font-family: 'Heebo', sans-serif;
+				font-size: 0.7rem;
+				color: $white;
+				text-decoration: none;
+
+				&:link {
+					color: $white;
+					text-decoration: none;
+				}
+
+				&:visited {
+					color: $white;
+					text-decoration: none;
+				}
+
+				&:hover {
+					color: $brand-secondary;
+					text-decoration: none;
+				}
+
+				&:active {
+					color: $brand-secondary;
+					text-decoration: none;
+				}
+			}
+
+			&-heading {
+				font-family: 'Heebo', sans-serif;
+				font-size: 1.1rem;
+				color: $white;
+				margin-bottom: 0;
+			}
+
+			&-personnel {
+				position: relative;
+				list-style-type: none;
+				text-align: left;
+				margin-bottom: 30px;
+
+				&-position {
+					font-family: 'Heebo', sans-serif;
+					font-size: 0.9rem;
+					color: $white;
+					margin-bottom: 0;
+				}
+
+				&-email-address {
+					font-family: 'Heebo', sans-serif;
+					font-size: 0.8rem;
+					color: $white;
+					margin-bottom: 0;
+				}
+
+				&-phone-number {
+					margin-bottom: 0;
+
+					a {					
+						font-family: 'Heebo', sans-serif;
+						font-size: 0.8rem;
+						color: $white;
+						text-decoration: none;
+
+						&:visited {
+							color: $white;
+							text-decoration: none;
+						}
+
+						&:hover,
+						&:active {
+							color: $white;
+							text-decoration: none;
+						}
+					}
+				}
+
+				&-territories {
+					font-family: 'Heebo', sans-serif;
+					font-size: 0.8rem;
+					color: $white;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+///////////////////////////////////
+// GLOBAL SEARCH RESULT STYLINGS //
+///////////////////////////////////
+.searchwp-live-search-result {
+
+	p {
+		padding: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+
+		a {
+			display: inline-block;
+			padding: 1em;
+			width: 100%;
+			color: $brand-primary;
+			text-decoration: none;
+			transition: background-color 0.15s;
+			line-height: 1;
+
+			&:hover {
+				background-color: lighten($light-gray,5%);
+			}	
+		}
+	}
+}
+
+
+///////////////////////////////////////////
+// BEGIN INDIVIDUAL PAGE SEARCH STYLINGS //
+///////////////////////////////////////////
+
+.home .searchwp-live-search-results.searchwp-live-search-results-showing {
+	top: 123px !important;
+	right: 0px !important;
+	left: auto !important;
+	width: 100% !important;
+	border-radius: 0px;
+
+	@media (min-width: 320px) {
+		top: 123px !important;
+		width: 319px !important;
+	}
+
+	@media (min-width: 341px) {
+		top: 123px !important;
+		width: 339px !important;
+	}
+
+	@media (min-width: 346px) {
+		top: 123px !important;
+		width: 345px !important;
+	}
+
+	@media (min-width: 463px) {
+		top: 134px !important;
+		width: 462px !important;
+	}
+
+	@include media-breakpoint-up(sm) {
+		top: 154px !important;
+		width: 462px !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		top: 174px !important;
+		width: 462px !important;
+	}
+
+	@include media-breakpoint-up(lg) {
+		top: 88px !important;
+		width: 462px !important;
+	}
+}
+
+.search .searchwp-live-search-results.searchwp-live-search-results-showing {
+	border-radius: 0px;
+}
