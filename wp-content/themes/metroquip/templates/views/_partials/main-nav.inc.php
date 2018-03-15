@@ -4,7 +4,7 @@
         	<a class="main-nav-list-item-link--home" id="main-nav-list-item-link--home" href="/" ontouchstart=""><img class="main-nav-home-logo" src="<?php echo get_template_directory_uri(); ?>/dist/images/metroquip-logo.svg" alt="MetroQuip Logo"></a>
         </li>
         <li class="main-nav-list-item">
-        	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-products.svg'); ?><br>Equipment Sales</a>
+        	<a class="main-nav-list-item-link" href="#" ontouchstart="">x<?php echo file_get_contents(get_template_directory().'/dist/images/icon-products.svg'); ?><br>Equipment Sales</a>
         	<ul class="main-subnav-list">
                 <?php foreach ( $partialModel['main-nav']['products'] as $typeName => $brandArray ): ?>
                 <li class="main-subnav-list-item">
@@ -37,7 +37,7 @@
                                                 <li class="main-subsubnav-list-item"><a class="main-subsubnav-list-item-link" href="<?php echo $product['permalink'] ?>"><?php echo $product['name']; ?></a></li>
                                             <?php endforeach; ?>
                                         </ul>
-                                    <?php endforeach; ?> 
+                                    <?php endforeach; ?>
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -60,13 +60,13 @@
                     <a class="main-subnav-list-item-link" href="/?s=" ontouchstart="">Search</a>
                 </li>
         	</ul>
-        </li>
+        </li> <!-- Equipment Sales -->
         <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-rentals.svg'); ?><br>Equipment Rentals</a>
             <ul class="main-subnav-list">
                 <?php foreach ( $partialModel['main-nav']['equipmentRentals'] as $equipmentRental ): ?>
                 <li class="main-subnav-list-item">
-                    <a class="main-subnav-list-item-link" href="<?php echo $equipmentRental['permalink']; ?>" ontouchstart=""><?php echo $equipmentRental['name']; ?></a> 
+                    <a class="main-subnav-list-item-link" href="<?php echo $equipmentRental['permalink']; ?>" ontouchstart=""><?php echo $equipmentRental['name']; ?></a>
                 </li>
                 <?php endforeach; ?>
             </ul>
