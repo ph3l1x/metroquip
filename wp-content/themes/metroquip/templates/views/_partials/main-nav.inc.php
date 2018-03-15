@@ -4,7 +4,7 @@
         	<a class="main-nav-list-item-link--home" id="main-nav-list-item-link--home" href="/" ontouchstart=""><img class="main-nav-home-logo" src="<?php echo get_template_directory_uri(); ?>/dist/images/metroquip-logo.svg" alt="MetroQuip Logo"></a>
         </li>
         <li class="main-nav-list-item">
-        	<a class="main-nav-list-item-link" href="#" ontouchstart="">x<?php echo file_get_contents(get_template_directory().'/dist/images/icon-products.svg'); ?><br>Equipment Sales</a>
+        	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-products.svg'); ?><br>Equipment Sales</a>
         	<ul class="main-subnav-list">
                 <?php foreach ( $partialModel['main-nav']['products'] as $typeName => $brandArray ): ?>
                 <li class="main-subnav-list-item">
@@ -62,6 +62,44 @@
         	</ul>
         </li> <!-- Equipment Sales -->
         <li class="main-nav-list-item">
+          <a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-parts.svg'); ?><br>Parts/Accessories</a>
+          <ul class="main-subnav-list">
+            <?php foreach ( $partialModel['main-nav']['parts'] as $typeName => $brandArray ): ?>
+              <li class="main-subnav-list-item">
+                <a class="main-subnav-list-item-link" href="#" ontouchstart=""><?php echo $typeName; ?></a>
+
+                <?php if ( is_array( $brandArray ) && !empty( $brandArray ) ): ?>
+
+                  <div class="main-subsubnav-column">
+                    <div class="main-subsubnav-wrapper">
+
+                      <?php foreach ( $brandArray as $brandName => $styleArray ): ?>
+                        <a href="<?php echo $partialModel['main-nav']['parts'][$brandName]['permalink']; ?>">
+                          <!-- <h3 class="main-subsubnav-brand-title"><?php echo $brandName; ?> <?php echo $typeName; ?></h3> -->
+                          <div class="main-subsubnav-brand-logo-container">
+                            <img class="main-subsubnav-brand-logo" src="<?php echo $partialModel['main-nav']['partBrands'][$brandName]['brandLogo']; ?>" alt="<?php echo $brandName ?> Logo">
+                          </div>
+                        </a>
+                        <hr style="background-color: #FFFFFF;margin-top:5px;margin-bottom:5px;">
+                        <ul class="main-subsubnav-list">
+
+                          <?php foreach ( $styleArray as $styleName => $partsArray ): ?>
+                            <?php foreach ( $partsArray as $part ): ?>
+                              <li class="main-subsubnav-list-item"><a class="main-subsubnav-list-item-link" href="<?php echo $part['permalink']; ?>"><?php echo $part['name']; ?></a></li>
+                            <?php endforeach; ?>
+                          <?php endforeach; ?>
+
+                        </ul>
+                      <?php endforeach; ?>
+
+                    </div>
+                  </div>
+                <?php endif; ?>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </li> <!-- Parts/Accessories -->
+        <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-rentals.svg'); ?><br>Equipment Rentals</a>
             <ul class="main-subnav-list">
                 <?php foreach ( $partialModel['main-nav']['equipmentRentals'] as $equipmentRental ): ?>
@@ -70,45 +108,7 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
-        </li>
-        <li class="main-nav-list-item">
-        	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-parts.svg'); ?><br>Parts/Accessories</a>
-            <ul class="main-subnav-list">
-                <?php foreach ( $partialModel['main-nav']['parts'] as $typeName => $brandArray ): ?>
-                <li class="main-subnav-list-item">
-                    <a class="main-subnav-list-item-link" href="#" ontouchstart=""><?php echo $typeName; ?></a>
-
-                    <?php if ( is_array( $brandArray ) && !empty( $brandArray ) ): ?>
-
-                    <div class="main-subsubnav-column">
-                        <div class="main-subsubnav-wrapper">
-
-                            <?php foreach ( $brandArray as $brandName => $styleArray ): ?>
-                            <a href="<?php echo $partialModel['main-nav']['parts'][$brandName]['permalink']; ?>">
-                                <!-- <h3 class="main-subsubnav-brand-title"><?php echo $brandName; ?> <?php echo $typeName; ?></h3> -->
-                                <div class="main-subsubnav-brand-logo-container">
-                                    <img class="main-subsubnav-brand-logo" src="<?php echo $partialModel['main-nav']['partBrands'][$brandName]['brandLogo']; ?>" alt="<?php echo $brandName ?> Logo">
-                                </div>
-                            </a>
-                            <hr style="background-color: #FFFFFF;margin-top:5px;margin-bottom:5px;">
-                            <ul class="main-subsubnav-list">
-
-                            <?php foreach ( $styleArray as $styleName => $partsArray ): ?>
-                                <?php foreach ( $partsArray as $part ): ?>
-                                <li class="main-subsubnav-list-item"><a class="main-subsubnav-list-item-link" href="<?php echo $part['permalink']; ?>"><?php echo $part['name']; ?></a></li>
-                                <?php endforeach; ?>
-                            <?php endforeach; ?>
-
-                            </ul>
-                            <?php endforeach; ?>
-
-                        </div>
-                    </div>
-                    <?php endif; ?>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        </li>
+        </li> <!-- Equipment Rentals -->
         <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="#" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-service.svg'); ?><br>Service</a>
 
@@ -131,10 +131,10 @@
                 </li>
             <?php endforeach; ?>
             </ul>
-        </li>
+        </li> <!-- Service -->
         <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="/about/" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-about.svg'); ?><br>About</a>
-        </li>
+        </li> <!-- About -->
         <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="/contact/" ontouchstart=""><?php echo file_get_contents(get_template_directory().'/dist/images/icon-contact.svg'); ?><br>Contact</a>
             <ul class="main-subnav-list">
@@ -171,7 +171,7 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
-        </li>
+        </li> <!-- Contact -->
 <!--         <li class="main-nav-list-item">
         	<a class="main-nav-list-item-link" href="/bulletins-tips/" ontouchstart=""><?php echo file_get_contents(get_template_directory_uri().'/dist/images/icon-tips.svg'); ?><br>Bulletins/Tips</a>
         </li> -->
