@@ -11,15 +11,11 @@
 		</div>
 		<div class="contact-sidebar-personnel-row">
       <?php
-      global $wp;
-      print_r($wp->request);
-      $page = explode('/', $wp->request)[0];
-      print_r($page);
-      echo "<br>xxxxxxx<br>";
-      print_r($partialModel);
+      global $wp; $page = explode('/', $wp->request)[0]; ?>
+			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
+      print_r($person['name']);
+        ?>
 
-      ?>
-			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ): ?>
 			<div class="contact-sidebar-personnel-column">
 				<img class="contact-sidebar-personnel-photo" src="<?php echo $person['photoArray']['url']; ?>" alt="">
 				<p class="contact-sidebar-personnel-name"><?php echo $person['name']; ?></p>
