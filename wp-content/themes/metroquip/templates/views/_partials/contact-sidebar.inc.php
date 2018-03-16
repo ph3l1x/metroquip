@@ -13,7 +13,7 @@
       <?php
       global $wp;
       print_r($wp->request);
-      $page = split($wp->request, '/');
+      $page = explode($wp->request, '/');
       print_r($page);
       echo "<br>xxxxxxx<br>";
       print_r($partialModel);
