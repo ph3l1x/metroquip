@@ -12,7 +12,7 @@
 		<div class="contact-sidebar-personnel-row">
       <?php
       global $wp;
-      print_r($wp);
+      print_r($wp->request);
       echo "<br>xxxxxxx<br>";
       print_r($partialModel);
 
