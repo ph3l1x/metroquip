@@ -10,6 +10,11 @@
 			<p class="contact-sidebar-subtext"><?php echo $partialModel[$partialName]['contactSidebarSubtitleText'] ?></p>
 		</div>
 		<div class="contact-sidebar-personnel-row">
+      <?php
+
+      print_r($partialModel);
+
+      ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ): ?>
 			<div class="contact-sidebar-personnel-column">
 				<img class="contact-sidebar-personnel-photo" src="<?php echo $person['photoArray']['url']; ?>" alt="">
