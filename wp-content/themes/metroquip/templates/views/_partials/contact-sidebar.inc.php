@@ -14,7 +14,7 @@
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
 
-        var_dump($person['title']);
+        var_dump($person['department']);
 
         if(($page == 'service') && ($person['title'] == "Service Technician")) {
 			    $photo = $person['photoArray']['url'];
