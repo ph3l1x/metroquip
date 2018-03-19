@@ -14,7 +14,7 @@
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
       print_r($person['name']);
-			print_r($person);
+			print_r($person['title']);
         ?>
 
 			<div class="contact-sidebar-personnel-column">
