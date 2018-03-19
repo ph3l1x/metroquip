@@ -28,7 +28,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } if(($page == 'equipment-rental') && ($person['title'] == "Vice President") && ($person['title'] == "Sales Representative")) {
+        <?php } if(($page == 'equipment-rental') && ($person['name'] == "Jeff McCoy") && ($person['name'] == "Jake Donahoo")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
