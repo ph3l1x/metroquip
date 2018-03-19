@@ -13,14 +13,13 @@
       <?php
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
-        var_dump($page);
         if(($page == 'service') && ($person['name'] == "Todd Ethridge")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
 			    $email = $person['emailAddress'];
 			    $tServiced = $person['territoriesServiced'];
-          ?>servicex
+          ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -28,13 +27,13 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } if(($page == 'equipment-rental') && ($person['name'] == "Jeff McCoy") && ($person['name'] == "Jake Donahoo")) {
+        <?php } if(($page == 'equipment-rental') && ($person['name'] == "Jeff McCoy" || $person['name'] == "Jake Donahoo")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>equipment rentalx
+          ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -48,7 +47,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>part accessoryx
+          ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -62,7 +61,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>equipment salesx
+          ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -76,7 +75,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>aboutx
+          ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
