@@ -13,25 +13,85 @@
       <?php
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
+
         if(($page == 'service') && ($person['title'] == "Service Technician")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
 			    $email = $person['emailAddress'];
 			    $tServiced = $person['territoriesServiced'];
-        }
-        var_dump($page);
-      print_r($person['name']);
-			print_r($person['title']);
-        ?>
-
-			<div class="contact-sidebar-personnel-column">
-				<img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
-				<p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
-				<p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
-				<a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-				<p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
-			</div>
+          ?>
+          <div class="contact-sidebar-personnel-column">
+            <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
+            <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
+            <p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
+            <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
+          </div>
+        <?php } elseif(($page == 'equipment-rental') && ($person['title'] == "Service Technician")) {
+          $photo = $person['photoArray']['url'];
+          $name = $person['name'];
+          $title = $person['title'];
+          $email = $person['emailAddress'];
+          $tServiced = $person['territoriesServiced'];
+          ?>
+          <div class="contact-sidebar-personnel-column">
+            <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
+            <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
+            <p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
+            <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
+          </div>
+        <?php } elseif(($page == 'part-accessory') && ($person['title'] == "Service Technician")) {
+          $photo = $person['photoArray']['url'];
+          $name = $person['name'];
+          $title = $person['title'];
+          $email = $person['emailAddress'];
+          $tServiced = $person['territoriesServiced'];
+          ?>
+          <div class="contact-sidebar-personnel-column">
+            <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
+            <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
+            <p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
+            <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
+          </div>
+        <?php } elseif(($page == 'equipment-sales') && ($person['title'] == "Service Technician")) {
+          $photo = $person['photoArray']['url'];
+          $name = $person['name'];
+          $title = $person['title'];
+          $email = $person['emailAddress'];
+          $tServiced = $person['territoriesServiced'];
+          ?>
+          <div class="contact-sidebar-personnel-column">
+            <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
+            <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
+            <p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
+            <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
+          </div>
+        <?php } elseif(($page == 'about') && ($person['title'] == "Service Technician")) {
+          $photo = $person['photoArray']['url'];
+          $name = $person['name'];
+          $title = $person['title'];
+          $email = $person['emailAddress'];
+          $tServiced = $person['territoriesServiced'];
+          ?>
+          <div class="contact-sidebar-personnel-column">
+            <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
+            <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
+            <p class="contact-sidebar-personnel-title"><?php echo $title; ?></p>
+            <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
+        </div>
+      <?php } ?>
+<!--			<div class="contact-sidebar-personnel-column">-->
+<!--				<img class="contact-sidebar-personnel-photo" src="--><?php //echo $photo; ?><!--" alt="">-->
+<!--				<p class="contact-sidebar-personnel-name">--><?php //echo $name; ?><!--</p>-->
+<!--				<p class="contact-sidebar-personnel-title">--><?php //echo $title; ?><!--</p>-->
+<!--				<a class="contact-sidebar-personnel-email-address" href="mailto:--><?php //echo $email; ?><!--">--><?php //echo $email; ?><!--</a>-->
+<!--				<p class="contact-sidebar-personnel-territories-serviced">--><?php //echo $tServiced; ?><!--</p>-->
+<!--			</div>-->
 			<?php endforeach; ?>
 		</div>
 		<form class="contact-sidebar-form" id="contact-sidebar-form" action="">
