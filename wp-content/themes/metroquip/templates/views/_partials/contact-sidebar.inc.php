@@ -17,7 +17,6 @@
         var_dump($page);
       print_r($person['name']);
 			print_r($person['title']);
-			var_dump($person);
         ?>
 
 			<div class="contact-sidebar-personnel-column">
