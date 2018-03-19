@@ -19,7 +19,7 @@
 			    $title = $person['title'];
 			    $email = $person['emailAddress'];
 			    $tServiced = $person['territoriesServiced'];
-          ?>
+          ?>service
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -33,7 +33,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>
+          ?>equipment rental
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -47,7 +47,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>
+          ?>part accessory
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -61,7 +61,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>
+          ?>equipment sales
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
@@ -75,7 +75,7 @@
           $title = $person['title'];
           $email = $person['emailAddress'];
           $tServiced = $person['territoriesServiced'];
-          ?>
+          ?>about
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
             <p class="contact-sidebar-personnel-name"><?php echo $name; ?></p>
