@@ -20,6 +20,7 @@
 			    $title = $person['title'];
 			    $email = $person['emailAddress'];
 			    $tServiced = $person['territoriesServiced'];
+			    var_dump($title);
           ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
