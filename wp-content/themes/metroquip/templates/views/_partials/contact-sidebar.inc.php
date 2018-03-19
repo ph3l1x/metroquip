@@ -14,7 +14,7 @@
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
         var_dump($page);
-        if(($page == 'service') || ($person['name'] == "Todd Ethridge")) {
+        if(($page == 'service') && ($person['name'] == "Todd Ethridge")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
@@ -28,7 +28,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'equipment-rental') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
+        <?php } if(($page == 'equipment-rental') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
@@ -42,7 +42,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'part-accessory') && ($person['title'] == "Parts Counter Sales") || ($person['title'] == "Parts Manager")) {
+        <?php } if(($page == 'part-accessory') && ($person['title'] == "Parts Counter Sales") || ($person['title'] == "Parts Manager")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
@@ -56,7 +56,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'equipment-sales') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
+        <?php } if(($page == 'equipment-sales') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
@@ -70,7 +70,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'about') && ($person['title'] == "Service Technician")) {
+        <?php } if(($page == 'about') && ($person['title'] == "Service Technician")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
