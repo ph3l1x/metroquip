@@ -14,13 +14,14 @@
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
 
+        var_dump($title);
+
         if(($page == 'service') && ($person['title'] == "Service Technician")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
 			    $email = $person['emailAddress'];
 			    $tServiced = $person['territoriesServiced'];
-			    var_dump($title);
           ?>
           <div class="contact-sidebar-personnel-column">
             <img class="contact-sidebar-personnel-photo" src="<?php echo $photo; ?>" alt="">
