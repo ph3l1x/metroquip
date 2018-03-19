@@ -13,6 +13,7 @@
       <?php
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
+        var_dump($page);
         if(($page == 'service') && ($person['title'] == "Service Manager")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
