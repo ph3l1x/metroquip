@@ -13,7 +13,7 @@
       <?php
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
-        if(($page == 'service') && ($person['title'] == "Service Technician")) {
+        if(($page == 'service') && ($person['title'] == "Service Manager")) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
@@ -27,7 +27,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'equipment-rental') && ($person['title'] == "Service Technician")) {
+        <?php } elseif(($page == 'equipment-rental') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
@@ -55,7 +55,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'equipment-sales') && ($person['title'] == "Service Technician")) {
+        <?php } elseif(($page == 'equipment-sales') && ($person['title'] == "Vice President") || ($person['title'] == "Sales Representative")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
