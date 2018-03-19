@@ -44,7 +44,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } elseif(($page == 'part-accessory') && ($person['title'] == "Service Technician")) {
+        <?php } elseif(($page == 'part-accessory') && ($person['title'] == "Parts Counter Sales") || ($person['title'] == "Parts Manager")) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
