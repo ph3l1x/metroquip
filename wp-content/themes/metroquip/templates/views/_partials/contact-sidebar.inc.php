@@ -15,6 +15,7 @@
       var_dump($partialModel[$partialName]['personnel']);
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
+        var_dump($page);
       print_r($person['name']);
 			print_r($person['title']);
 			var_dump($person);
