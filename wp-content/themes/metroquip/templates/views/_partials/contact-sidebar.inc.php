@@ -1,3 +1,4 @@
+<?php var_dump($partialModel);
 <div class="contact-sidebar-column">
 	<div class="contact-sidebar-wrapper">
 		<div class="contact-sidebar-title-container">
