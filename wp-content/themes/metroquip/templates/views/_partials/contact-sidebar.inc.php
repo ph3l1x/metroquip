@@ -13,7 +13,7 @@
       <?php
       global $wp; $page = explode('/', $wp->request)[0]; ?>
 			<?php foreach ( $partialModel[$partialName]['personnel'] as $person ):
-        if(($page == 'service') && ($person['name'] == "Todd Ethridge")) {
+        if(($page == 'service') && ($person['name'] == "Todd Ethridge" || $person['name'] == 'Craig Harris' || $person['name'] == 'Jon Buck')) {
 			    $photo = $person['photoArray']['url'];
 			    $name = $person['name'];
 			    $title = $person['title'];
