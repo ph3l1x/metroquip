@@ -41,7 +41,7 @@
             <a class="contact-sidebar-personnel-email-address" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             <p class="contact-sidebar-personnel-territories-serviced"><?php echo $tServiced; ?></p>
           </div>
-        <?php } if(($page == 'part-accessory') && ($person['title'] == "Parts Counter Sales" || $person['title'] == "Parts Manager")) {
+        <?php } if(($page == 'part-accessory') && ($person['title'] == "Parts Counter Sales" || $person['title'] == "Parts Manager" || $person['name'] == 'Doug Records')) {
           $photo = $person['photoArray']['url'];
           $name = $person['name'];
           $title = $person['title'];
