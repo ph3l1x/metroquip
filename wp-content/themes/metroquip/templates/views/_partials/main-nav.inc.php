@@ -146,7 +146,6 @@
                         <div class="main-subsubnav-wrapper">
                             <ul class="main-subsubnav-list">
                             <?php foreach ( $personnelArray as $person ): ?>
-                              <?php var_dump($person); ?>
                                 <li class="main-subsubnav-list-item-personnel">
                                     <h4 class="main-subsubnav-list-item-heading"><?php echo $person['name']; ?></h4>
                                     <?php if ( !empty( $person['position'] ) ): ?>
